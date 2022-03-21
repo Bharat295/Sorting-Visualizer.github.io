@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Dosis:wght@300&family=Poppins:wght@400;500;600;700&family=Saira+Condensed:wght@100&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script
+      src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js"
+    ></script>
+
+    <script type="text/javascript">
+      textFit(document.querySelector("span"));
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#icon").click(function () {
+          $("ul").toggleClass("show");
+        });
+      });
+
+     
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <title>Sorting Visualizer</title>
+  </head>
+  <body>
+    <!-- <nav>
+        <label for="" class="logo">Sorting Visulizer</label>
+        <ul>
+          <li><a class="active" href="#">Selection Sort</a></li>
+          <li><a href="#div1">Bubble Sort</a></li>
+          <li><a href="#div2">Insertion Sort</a></li>
+          <li><a href="#div3">Merge Sort</a></li>
+          <li><a href="#">Quick Sort</a></li>
+        </ul>
+        <label id="icon">
+          <i class="fas fa-bars"></i>
+        </label>
+      </nav>
+    -->
+   <header id="navSection">    
+      <nav id="nav">
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        
+        <label class="logo">Sorting Visulizer</label>
+        <ul>
+          <li><a href="#Selection" data-after="Sorting algorithms">Selection Sort</a></li>
+          <li><a href="#Bubble"data-after = "Bubble Sort" > Bubble Sort</a></li>
+          <li><a href="#Insertion" data-after = "Insertion Sort" >Insertion Sort</a></li>
+          <li><a href="#Merge" data-after = "Merge Sort" >Merge Sort</a></li>
+          <li><a href="#Quick" data-after = "Quick Sort" >Quick Sort</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="Header">
+      
+       <div class="title">  
+        <span style="--i: 1">S</span>
+        <span style="--i: 2">O</span>
+        <span style="--i: 3">R</span>
+        <span style="--i: 4">T</span>
+        <span style="--i: 5">I</span>
+        <span style="--i: 6">N</span>
+        <span style="--i: 7">G</span>
+        <b></b>
+
+        <span style="--i: 9">V</span>
+        <span style="--i: 10">I</span>
+        <span style="--i: 11">S</span>
+        <span style="--i: 12">U</span>
+        <span style="--i: 13">A</span>
+        <span style="--i: 14">L</span>
+        <span style="--i: 15">I</span>
+        <span style="--i: 16">Z</span>
+        <span style="--i: 17">E</span>
+        <span style="--i: 18">R</span>
+      </div>
+
+      <div class="sectionDemo">
+        <p class="sort">Sorting</p>
+        <p class="vis">Visualizer</p>
+     
+      </div> 
+     <!-- <h1>Hello</h1> -->
+
+    </div>
+    <!-- <div id="div2"></div>
+    <div id="div3"></div> -->
+
+  
+    </div>
+    <div id="section2">
+      <div class="content">
+        <h1 class="upper">Sorting algorithms</h1>
+      </div>
+
+      <div class="text">
+        Sorting algorithms are used to sort a data structure according to a
+        specific order relationship, such as numerical order or lexicographical
+        order.
+      </div>
+      <div class="text">
+        This operation is one of the most important and widespread in computer
+        science. For a long time, new methods have been developed to make this
+        procedure faster and faster.
+      </div>
+      <div class="text">
+        There are currently hundreds of different sorting algorithms, each with
+        its own specific characteristics. They are classified according to two
+        metrics: space complexity and time complexity.
+      </div>
+
+      <div class="text">
+        Those two kinds of complexity are represented with asymptotic notations,
+        mainly with the symbols O, Θ, Ω, representing respectively the upper
+        bound, the tight bound, and the lower bound of the algorithm's
+        complexity, specifying in brackets an expression in terms of n, the
+        number of the elements of the data structure.
+      </div>
+      <div class="text">Most of them fall into two categories:</div>
+      <div class="text">
+        1. Logarithmic The complexity is proportional to the binary logarithm
+        (i.e to the base 2) of n. An example of a logarithmic sorting algorithm
+        is Quick sort, with space and time complexity O(n × log n).
+      </div>
+      <div class="text">
+        2. Quadratic The complexity is proportional to the square of n. An
+        example of a quadratic sorting algorithm is Bubble sort, with a time
+        complexity of O(n2).
+      </div>
+
+      <div class="text">
+        Sorting algorithms can be difficult to understand and it's easy to get
+        confused. We believe visualizing sorting algorithms can be a great way
+        to better understand their functioning while having fun!
+      </div>
+    </div>
+    <section id="Selection">
+      <div class="section3 selection">
+        <h1>Selection Sort</h1>
+
+        <div class="theory">
+          <div>
+            The selection sort algorithm sorts an array by repeatedly finding
+            the minimum element (considering ascending order) from unsorted part
+            and putting it at the beginning. The algorithm maintains two
+            subarrays in a given array.
+          </div>
+
+          <div>1) The subarray which is already sorted.</div>
+          <div>2) Remaining subarray which is unsorted.</div>
+          <div>
+            In every iteration of selection sort, the minimum element
+            (considering ascending order) from the unsorted subarray is picked
+            and moved to the sorted subarray.
+          </div>
+          <div>Best, Worst and Average Case Time Complexity: O(n*n).</div>
+        </div>
+        <div class="btn" onclick="change()">
+          <a href="Selection.html" class="vsl" onclick="change()"> Visualization </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="Bubble">
+      <div class="section3 bubble">
+        <h1>Bubble Sort</h1>
+        <div class="theory">
+          <div>
+            Bubble Sort is the simplest sorting algorithm that works by
+            repeatedly swapping the adjacent elements if they are in wrong
+            order.
+          </div>
+          <div>
+            Just like the movement of air bubbles in the water that rise up to
+            the surface, each element of the array move to the end in each
+            iteration. Therefore, it is called a bubble sort.
+          </div>
+          <div>
+            Although it is simple to use, it is primarily used as an educational
+            tool because the performance of bubble sort is poor in the real
+            world. It is not suitable for large data sets.
+          </div>
+          <div>
+            Worst and Average Case Time Complexity: O(n*n). Best Case Time
+            Complexity: O(n).
+          </div>
+        </div>
+        <div class="btn">
+          <a href="bubble.html" class="vsl"> Visualization </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="Insertion">
+      <div class="section3 insertion">
+        <h1>Insertioin Sort</h1>
+        <div class="theory">
+          <div>
+            Insertion sort is a simple sorting algorithm that works similar to
+            the way you sort playing cards in your hands. The array is virtually
+            split into a sorted and an unsorted part. Values from the unsorted
+            part are picked and placed at the correct position in the sorted
+            part.
+          </div>
+          <div>
+            Algorithm : <br />
+            To sort an array of size n in ascending order:
+          </div>
+          <div>1). Iterate from arr[1] to arr[n] over the array.</div>
+          <div>
+            2). Compare the current element (key) to its predecessor. If the key
+            element is smaller than its predecessor, compare it to the elements
+            before. Move the greater elements one position up to make space for
+            the swapped element.
+          </div>
+          <div>
+            Worst and Average Case Time Complexity: O(n*n). Best Case Time
+            Complexity: O(n).
+          </div>
+        </div>
+        <div class="btn">
+          <a href="Insertion.html" class="vsl"> Visualization </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="Merge">
+      <div class="section3 merge">
+        <h1>Merge Sort</h1>
+        <div class="theory">
+          <div>
+            Merge Sort is a Divide and Conquer algorithm. It divides the input
+            array into two halves, calls itself for the two halves, and then
+            merges the two sorted halves.
+          </div>
+          <div>
+            The merge() function is used for merging two halves. The merge(arr,
+            l, m, r) is a key process that assumes that arr[l..m] and
+            arr[m+1..r] are sorted and merges the two sorted sub-arrays into
+            one.
+          </div>
+          <div>
+            The MergeSort function repeatedly divides the array into two halves
+            until we reach a stage where we try to perform MergeSort on a
+            subarray of size 1. After that, the merge function comes into play
+            and combines the sorted arrays into larger arrays until the whole
+            array is merged.
+          </div>
+          <div>Best, Worst and Average Case Time Complexity: O(n log(n))</div>
+        </div>
+        <div class="btn">
+          <a href="Merge.html" class="vsl">Visualization</a>
+        </div>
+      </div>
+    </section>
+    <section id="Quick">
+      <div class="section3 quick">
+        <h1>Quick Sort</h1>
+        <div class="theory">
+          <div>
+            QuickSort is a Divide and Conquer algorithm. It picks an element as
+            pivot and partitions the given array around the picked pivot. There
+            are many different versions of quickSort that pick pivot in
+            different ways.
+          </div>
+          <div>
+            The key process in quickSort is partition(). Target of partitions
+            is, given an array and an element x of array as pivot, put x at its
+            correct position in sorted array and put all smaller elements
+            (smaller than x) before x, and put all greater elements (greater
+            than x) after x. All this should be done in linear time.
+          </div>
+
+          <div>
+            Best and Average Case Time Complexity : O(n logn) and Worst Case
+            Time Complexity : O(n^2).
+          </div>
+        </div>
+        <div class="btn">
+          <a href="Quick.html" class="vsl"> Visualization </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="Footer">
+      <div class="Footer Container">
+        <div class="brand">
+          <h1>Bharat Lakhera</h1>
+        </div>
+        <h2>@J.C. Bose University of Science & Technology, YMCA, Faridabad</h2>
+        <div class="icon">
+          <div class="social-item">
+            <a href="https://www.linkedin.com/in/bharat-lakhera-687aab204/"><img src="link.png" alt="" /></a>
+          </div>
+          <div class="social-item insta">
+            <a href="https://www.instagram.com/bharat.lakhera.961/"><img src="insta.png" /></a>
+          </div>
+          <div class="social-item twit">
+            <a href="https://twitter.com/Bharat02172785/"><img src="twitter.png" /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
